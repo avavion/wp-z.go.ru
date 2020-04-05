@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5c55b6f969.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<title>Главная - Клуб "Паутина"</title>
 </head>
 
@@ -17,17 +17,17 @@
 	<header id="header" class="header">
 		<div class="container">
 			<nav class="header-nav" id="header-nav">
-				<a href="index.html" class="header-nav__logo">
-					<img src="./assets/img/main_logo.svg" alt="Логотип клуба">
+				<a href="../index.html" class="header-nav__logo">
+					<img src="../assets/img/main_logo.svg" alt="Логотип клуба">
 				</a>
 				<ul class="header-nav__list">
-					<li class="header-nav__item"><a href="./pages/profile.html" class="header-nav__link">Профиль</a>
+					<li class="header-nav__item"><a href="./profile.html" class="header-nav__link">Профиль</a>
 					</li>
 					<li class="header-nav__item"><a href="#" class="header-nav__link" id="openModalRequest">Заявка</a>
 					</li>
 					<li class="header-nav__item"><a href="#" class="header-nav__link">Команда</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Поддержка</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Авторизация</a></li>
+					<li class="header-nav__item"><a href="./support.html" class="header-nav__link">Поддержка</a></li>
+					<li class="header-nav__item"><a href="./auth.html" class="header-nav__link">Авторизация</a></li>
 				</ul>
 
 				<a class="header-nav__button openMenu" id="openMenu">
@@ -39,59 +39,28 @@
 						<i class="fas fa-times"></i>
 					</div>
 					<ul class="mobile-menu__list">
-						<li class="mobile-menu__item"><a href="./pages/profile.html"
-								class="mobile-menu__link">Профиль</a></li>
-						<li class="mobile-menu__item"><a href="./pages/request.html"
-								class="mobile-menu__link">Заявка</a></li>
-						<li class="mobile-menu__item"><a href="./pages/team.html" class="mobile-menu__link">Команда</a>
+						<li class="mobile-menu__item"><a href="./profile.html" class="mobile-menu__link">Профиль</a>
 						</li>
-						<li class="mobile-menu__item"><a href="./pages/support.html"
-								class="mobile-menu__link">Поддержка</a></li>
-						<li class="mobile-menu__item"><a href="./pages/auth.html"
-								class="mobile-menu__link">Авторизация</a></li>
+						<li class="mobile-menu__item"><a href="./request.html" class="mobile-menu__link">Заявка</a></li>
+						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Команда</a>
+						</li>
+						<li class="mobile-menu__item"><a href="./support.html" class="mobile-menu__link">Поддержка</a>
+						</li>
+						<li class="mobile-menu__item"><a href="./auth.html" class="mobile-menu__link">Авторизация</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
 		</div>
-
-		<div class="header__image">
-			<div class="header__overlay">
-				<div class="container">
-					<div class="header-content">
-						<h1 class="header-content__title">Добро пожаловать в клуб</h1>
-						<a href="#" class="Button Button--Secondary" id="openModalRequest">
-							Оставить заявку
-						</a>
-						<a class="arrow--down arrow__btn" href=""><i class="far fa-arrow-alt-circle-down"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 	</header>
 
-	<section class="about" id="about">
-		<div class="container">
-			<div class="about-header section-header">
-				<h2 class="about-header__title section-header__title">
-					О нас
-				</h2>
-				<p class="about-header__text section-header__text">
-					Занимаемся разработкой веб-сайтов, дизайном и проектированием
-				</p>
-			</div>
-			<div class="about-main">
-
-			</div>
-		</div>
-	</section>
-
+	<h1>Команда</h1>
 
 	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="footer-wrap">
 				<div class="footer-logo">
-					<img src="./assets/img/main_logo.svg" alt="Логотип клуба" class="footer-loto__img">
+					<img src="../assets/img/main_logo.svg" alt="Логотип клуба" class="footer-loto__img">
 				</div>
 				<div class="footer-contacts">
 					<h3 class="footer__title">
@@ -127,7 +96,7 @@
 		</div>
 	</div>
 
-	<script src="scripts/main.js"></script>
+	<script src="../scripts/main.js"></script>
 </body>
 
 </html>

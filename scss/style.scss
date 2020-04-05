@@ -212,6 +212,32 @@ a {
 
 // /About Section
 
+// Footer
+
+.footer {
+  padding: 40px 0;
+  font-size: 0.8rem;
+  &-wrap {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &-logo,
+  &-contacts {
+    margin-right: 30px;
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.7em;
+  }
+}
+
+// /Footer
+
 // MEDIA
 
 @media (max-width: 991px) {
