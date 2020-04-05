@@ -1,11 +1,9 @@
 const scrollOff = () => {
-  const body = document.querySelector("body");
-  body.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
 };
 
 const scrollOn = () => {
-  const body = document.querySelector("body");
-  body.style.overflow = "hidden";
+  document.body.style.overflow = "";
 };
 
 const burgerMenu = (triggerSelector, menuSelector, closeSelector) => {
@@ -15,7 +13,6 @@ const burgerMenu = (triggerSelector, menuSelector, closeSelector) => {
 
   triggerButtons.forEach((item) => {
     item.addEventListener("click", () => {
-      console.log("DEBUG on CLICK OPEN BTN");
       mobileMenu.style.display = "block";
       scrollOff();
     });
@@ -27,6 +24,38 @@ const burgerMenu = (triggerSelector, menuSelector, closeSelector) => {
   });
 };
 
+const modalWindow = (
+  triggerSelector,
+  modalWindowSelector,
+  modalCloseSelector
+) => {
+  const openModal = document.querySelectorAll(triggerSelector),
+    modal = document.querySelector(modalWindowSelector),
+    closeModal = document.querySelector(modalCloseSelector);
+
+  openModal.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      scrollOff();
+      event.preventDefault();
+      modal.classList.add("openModal");
+    });
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      scrollOn();
+      modal.classList.remove("openModal");
+    }
+  });
+
+  closeModal.addEventListener("click", (event) => {
+    scrollOn();
+    event.preventDefault();
+    modal.classList.remove("openModal");
+  });
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");
+  modalWindow("#openModalRequest", "#ModalRequest", "#closeModalRequest");
 });

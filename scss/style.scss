@@ -13,6 +13,7 @@ $TextColor: #ffffff;
 $Primary__Button: #000000;
 $Secondary__Button: #45578e;
 $LinkColor: #ffffff;
+$aboutBackgroundColor: #ffffff;
 
 :root {
   --container: 1170px;
@@ -61,39 +62,68 @@ a {
   }
 }
 
+.arrow--down {
+  font-size: 3rem;
+}
+
 .openMenu {
   font-size: 1.5em;
   display: none;
 }
 
-.mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
-  &__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: #ffffff;
-    font-size: 2em;
-  }
-  &__list {
-    background-color: #000000;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  &__link {
-    font-size: 2rem;
+.section {
+  &-header {
+    text-align: center;
+    &__title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+    &__text {
+      font-weight: 300;
+    }
   }
 }
 
 // /Global Settings
+
+// Modals
+
+.modal {
+  &-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+
+  &-request {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid #fff;
+  }
+}
+.openModal {
+  z-index: 10;
+  display: block;
+}
+
+// /Modals
 
 // HEADER
 
@@ -104,6 +134,8 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-weight: bold;
+    text-transform: uppercase;
     &__item:not(:last-child) {
       margin-right: 30px;
     }
@@ -118,20 +150,71 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
   }
   &-content {
+    color: #ffffff;
     text-align: center;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
+    &__title {
+      margin-top: 260px;
+      margin-bottom: 70px;
+      font-size: 3em;
+    }
+    & .Button {
+      margin-bottom: 260px;
+    }
+  }
+}
+
+.mobile-menu {
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #ffffff;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  &__list {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+  }
+  &__link {
+    font-size: 2rem;
   }
 }
 
 // /HEADER
 
+// About Section
+
+.about {
+  padding: 80px 0;
+  background-color: $aboutBackgroundColor;
+  &-header {
+    margin-bottom: 80px;
+  }
+}
+
+// /About Section
+
 // MEDIA
 
-@media (max-width: 840px) {
+@media (max-width: 991px) {
   .header {
     &-nav {
       &__list {
@@ -142,6 +225,7 @@ a {
 
   .openMenu {
     display: block;
+    cursor: pointer;
   }
 }
 

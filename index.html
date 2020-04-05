@@ -21,8 +21,10 @@
 					<img src="./assets/img/main_logo.svg" alt="Логотип клуба">
 				</a>
 				<ul class="header-nav__list">
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Профиль</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Заявка</a></li>
+					<li class="header-nav__item"><a href="./pages/profile.html" class="header-nav__link">Профиль</a>
+					</li>
+					<li class="header-nav__item"><a href="#" class="header-nav__link" id="openModalRequest">Заявка</a>
+					</li>
 					<li class="header-nav__item"><a href="#" class="header-nav__link">Команда</a></li>
 					<li class="header-nav__item"><a href="#" class="header-nav__link">Поддержка</a></li>
 					<li class="header-nav__item"><a href="#" class="header-nav__link">Авторизация</a></li>
@@ -37,11 +39,16 @@
 						<i class="fas fa-times"></i>
 					</div>
 					<ul class="mobile-menu__list">
-						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Профиль</a></li>
-						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Заявка</a></li>
-						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Команда</a></li>
-						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Поддержка</a></li>
-						<li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Авторизация</a></li>
+						<li class="mobile-menu__item"><a href="./pages/profile.html"
+								class="mobile-menu__link">Профиль</a></li>
+						<li class="mobile-menu__item"><a href="./pages/request.html"
+								class="mobile-menu__link">Заявка</a></li>
+						<li class="mobile-menu__item"><a href="./pages/team.html" class="mobile-menu__link">Команда</a>
+						</li>
+						<li class="mobile-menu__item"><a href="./pages/support.html"
+								class="mobile-menu__link">Поддержка</a></li>
+						<li class="mobile-menu__item"><a href="./pages/auth.html"
+								class="mobile-menu__link">Авторизация</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -52,9 +59,10 @@
 				<div class="container">
 					<div class="header-content">
 						<h1 class="header-content__title">Добро пожаловать в клуб</h1>
-						<a href="#" class="Button Button--Secondary">
+						<a href="#" class="Button Button--Secondary" id="openModalRequest">
 							Оставить заявку
 						</a>
+						<a class="arrow--down arrow__btn" href=""><i class="far fa-arrow-alt-circle-down"></i></a>
 					</div>
 				</div>
 			</div>
@@ -62,6 +70,21 @@
 
 	</header>
 
+	<section class="about" id="about">
+		<div class="container">
+			<div class="about-header section-header">
+				<h2 class="about-header__title section-header__title">
+					О нас
+				</h2>
+				<p class="about-header__text section-header__text">
+					Занимаемся разработкой веб-сайтов, дизайном и проектированием
+				</p>
+			</div>
+			<div class="about-main">
+
+			</div>
+		</div>
+	</section>
 
 
 	<footer class="footer" id="footer">
@@ -70,6 +93,19 @@
 		</div>
 	</footer>
 
+
+	<div class="modalRequest modal-overlay" id="ModalRequest">
+		<div class="modal modal-request">
+			<div class="modal-request-header modal-header">
+				<h3 class="modal-header__title">
+					Оставить заявку
+				</h3>
+			</div>
+			<div class="modal-request-main modal-main">
+				<p>Тут контент...</p>
+			</div>
+		</div>
+	</div>
 
 	<script src="scripts/main.js"></script>
 </body>
