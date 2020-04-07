@@ -23,7 +23,7 @@
 				<ul class="header-nav__list">
 					<li class="header-nav__item"><a href="./profile.html" class="header-nav__link">Профиль</a>
 					</li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link" id="openModalRequest">Заявка</a>
+					<li class="header-nav__item"><a href="./request.html" class="header-nav__link" id="openModalRequest">Заявка</a>
 					</li>
 					<li class="header-nav__item"><a href="./team.html" class="header-nav__link">Команда</a></li>
 					<li class="header-nav__item"><a href="./support.html" class="header-nav__link">Поддержка</a></li>
@@ -55,7 +55,31 @@
 	</header>
 
 
-	<h1>Авторизация</h1>
+	<section class="auth" id="auth">
+		<div class="container">
+			<div class="section-header auth-header">
+				<h2 class="section-header__title auth-header__title">
+					Авторизация
+				</h2>
+			</div>
+			<form class="section-form auth-form">
+
+				<div class="section-form__input auth-form__input">
+					<label for="auth-form__email">Ваша эл. почта:</label>
+					<input type="email" name="user_email" id="auth-form__email" placeholder="example@club.ru">
+				</div>
+
+				<div class="section-form__input auth-form__input">
+					<label for="auth-form__password">Ваш пароль:</label>
+					<input type="password" name="user_password" id="auth-form__password"
+						placeholder="Что-то секретное...">
+				</div>
+
+				<input type="submit" value="Войти в клуб" class="Button Button--Primary">
+
+			</form>
+		</div>
+	</section>
 
 	<footer class="footer" id="footer">
 		<div class="container">

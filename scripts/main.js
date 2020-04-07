@@ -55,7 +55,25 @@ const modalWindow = (
   });
 };
 
+const accordion = (
+  triggerSelector,
+  showContentSelector,
+  closeContentSelector
+) => {
+  const openAccordionButtons = document.querySelectorAll(triggerSelector),
+    accordionContent = document.querySelectorAll(showContentSelector),
+    closeAccordionButtons = document.querySelectorAll(closeContentSelector);
+
+  openAccordionButtons.forEach((item, key) => {
+    item.addEventListener("click", () => {
+      accordionContent[key].classList.toggle("accordion--active");
+      closeAccordionButtons[key].classList.toggle("accordion__button--active");
+    });
+  });
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");
   modalWindow("#openModalRequest", "#ModalRequest", "#closeModalRequest");
+  accordion(".accordion-title", ".accordion-content", ".accordion__button");
 });
