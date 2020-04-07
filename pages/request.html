@@ -54,7 +54,38 @@
 		</div>
 	</header>
 
-	<h1>Заявка</h1>
+	<section class="request" id="request">
+		<div class="container">
+
+			<div class="section-header request-header">
+				<h2 class="section-header__title request-header__title">
+					Оставить заявку
+				</h2>
+			</div>
+
+			<form class="section-form request-form">
+
+				<div class="section-form__input request-form__input">
+					<label for="request-form__name">Ваше имя:</label>
+					<input type="text" name="user_name" id="request-form__name" placeholder="Алан">
+				</div>
+
+				<div class="section-form__input request-form__input">
+					<label for="request-form__email">Ваша эл. почта:</label>
+					<input type="email" name="user_email" id="request-form__email" placeholder="example@club.ru">
+				</div>
+
+				<div class="section-form__input request-form__input">
+					<label for="request-form__phone">Ваш номер телефона:</label>
+					<input type="tel" name="user_phone" id="request-form__phone" placeholder="+7 (900) 999 99 99">
+				</div>
+
+				<input type="submit" value="Оставить заявку" class="Button Button--Primary">
+
+			</form>
+
+		</div>
+	</section>
 
 
 	<footer class="footer" id="footer">
