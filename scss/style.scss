@@ -399,7 +399,7 @@ a {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  height: 80vh;
+  height: 90vh;
   &-header {
     margin-bottom: 50px;
   }
@@ -465,6 +465,21 @@ a {
 }
 
 // /Команда
+// Регистрация
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 90vh;
+  &-header {
+    margin-bottom: 50px;
+  }
+}
+
+// /Регистрация
 
 // /Pages
 
@@ -636,7 +651,7 @@ a {
   .section {
     &-header {
       &__title {
-        font-size: 1em;
+        font-size: 1.5em;
       }
     }
     &-form {
