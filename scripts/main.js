@@ -72,6 +72,17 @@ const accordion = (
   });
 };
 
+const checkbox = (checkboxSelector, buttonSelector) => {
+  const allCheckbox = document.querySelectorAll(checkboxSelector),
+    buttons = document.querySelectorAll(buttonSelector);
+
+  allCheckbox.forEach((item, key) =>
+    item.addEventListener("change", () => {
+      alert("Чек стоит.");
+    })
+  );
+};
+
 window.addEventListener("DOMContentLoaded", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");
   modalWindow("#openModalRequest", "#ModalRequest", "#closeModalRequest");

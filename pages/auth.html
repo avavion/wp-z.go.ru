@@ -116,7 +116,26 @@
 				</div>
 			</div>
 			<div class="modal-request-main modal-main">
-				<p>Тут контент...</p>
+				<form class="section-form modal-form">
+
+					<div class="section-form__input modal-form__input">
+						<label for="modal-form__name">Ваше имя:</label>
+						<input type="text" name="user_name" id="modal-form__name" placeholder="Алан">
+					</div>
+
+					<div class="section-form__input modal-form__input">
+						<label for="modal-form__email">Ваша эл. почта:</label>
+						<input type="email" name="user_email" id="modal-form__email" placeholder="example@club.ru">
+					</div>
+
+					<div class="section-form__input modal-form__input">
+						<label for="modal-form__phone">Ваш номер телефона:</label>
+						<input type="tel" name="user_phone" id="modal-form__phone" placeholder="+7 (900) 999 99 99">
+					</div>
+
+					<input type="submit" value="Оставить заявку" class="Button Button--Primary">
+
+				</form>
 			</div>
 		</div>
 	</div>
