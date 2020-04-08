@@ -72,6 +72,8 @@ const accordion = (
   });
 };
 
+
+// TODO: Проверка на check и enable кнопки при checked
 const checkbox = (checkboxSelector, buttonSelector) => {
   const allCheckbox = document.querySelectorAll(checkboxSelector),
     buttons = document.querySelectorAll(buttonSelector);
@@ -82,6 +84,8 @@ const checkbox = (checkboxSelector, buttonSelector) => {
     })
   );
 };
+
+
 
 window.addEventListener("DOMContentLoaded", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");
