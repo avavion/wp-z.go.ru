@@ -72,8 +72,7 @@ const accordion = (
   });
 };
 
-
-// TODO: Проверка на check и enable кнопки при checked
+// TODO: Проверка на check, если он стоит то разблокировать кнопку. Иначе, кнопка остаётся заблокированной. (Изначально чек не стоит)
 const checkbox = (checkboxSelector, buttonSelector) => {
   const allCheckbox = document.querySelectorAll(checkboxSelector),
     buttons = document.querySelectorAll(buttonSelector);
@@ -84,8 +83,6 @@ const checkbox = (checkboxSelector, buttonSelector) => {
     })
   );
 };
-
-
 
 window.addEventListener("DOMContentLoaded", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");

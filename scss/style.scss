@@ -108,31 +108,76 @@ a {
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 90vh;
   &-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    &__input {
+    &__caption {
+      margin-bottom: 2px;
+      margin-left: 10px;
+    }
+    &__checkbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+    &-checkboxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 370px;
+    }
+    &-links {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 370px;
+    }
+    &__link {
+      color: #000000;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      &:hover {
+        color: lighten(#000000, 50);
+      }
+    }
+    &__input:not(:last-child) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      margin-bottom: 40px;
+
+      label {
+        margin-bottom: 6px;
+      }
     }
     input {
       width: 370px;
       padding: 15px 10px;
+      &[type="checkbox"] {
+        width: auto;
+      }
     }
     label {
       font-size: 14px;
-      margin-bottom: 6px;
-    }
-    &__input {
-      margin-bottom: 40px;
     }
   }
 
   &-header {
     text-align: center;
+    margin-bottom: 50px;
     &__title {
       font-weight: bold;
       text-transform: uppercase;
@@ -215,7 +260,7 @@ a {
 
 .accordion {
   &-item {
-    background-color: #ccc;
+    background-color: ghostwhite;
     padding: 10px 0;
     border-radius: 10px;
     &:not(:last-child) {
@@ -375,38 +420,7 @@ a {
 
 // /NEWS
 
-// PAGES - Заявка
-
-.request {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  height: 80vh;
-  &-header {
-    margin-bottom: 50px;
-  }
-}
-
-// /Заявка
-
-// Авторизация
-
-.auth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  height: 90vh;
-  &-header {
-    margin-bottom: 50px;
-  }
-}
-
-// /Авторизация
-
+// PAGES
 // Команда
 
 .team {
@@ -465,21 +479,6 @@ a {
 }
 
 // /Команда
-// Регистрация
-
-.register {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  height: 90vh;
-  &-header {
-    margin-bottom: 50px;
-  }
-}
-
-// /Регистрация
 
 // /Pages
 
@@ -655,11 +654,13 @@ a {
       }
     }
     &-form {
+      &-links,
+      input,
+      &-checkboxes {
+        width: 260px;
+      }
       &__input {
         margin-bottom: 20px;
-      }
-      input {
-        width: 260px;
       }
     }
   }

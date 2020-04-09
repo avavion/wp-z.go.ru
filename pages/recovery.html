@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5c55b6f969.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../css/style.css">
-	<title>Регистрация - Клуб "Паутина"</title>
+	<title>Восстановление пароля - Клуб "Паутина"</title>
 </head>
 
 <body>
@@ -55,40 +55,32 @@
 		</div>
 	</header>
 
-
-	<section class="section register" id="register">
+	<section class="section recovery" id="recovery">
 		<div class="container">
-			<div class="section-header register-header">
-				<h2 class="section-header__title register-header__title">
-					Регистрация
+			<div class="section-header recovery-header">
+				<h2 class="section-header__title recovery-header__title">
+					Восстановление пароля
 				</h2>
+				<p class="section-header__text recovery-header__text">
+					Мы отправим вам письмо с новым паролем
+				</p>
 			</div>
-			<form class="section-form register-form" method="POST" name="RegisterForm">
+			<form class="section-form recovery-form" method="POST" name="RegisterForm">
 
-				<div class="section-form__input register-form__input">
-					<label for="register-form__email">Ваша эл. почта:</label>
-					<input type="email" name="UserEmail" id="register-form__email" placeholder="example@club.ru">
+				<div class="section-form__input recovery-form__input">
+					<label for="recovery-form__email">Ваша эл. почта:</label>
+					<input type="email" name="UserEmail" id="recovery-form__email" placeholder="example@club.ru">
 				</div>
 
-				<div class="section-form__input register-form__input">
-					<label for="register-form__password">Ваш пароль:</label>
-					<input type="password" name="UserPassword" id="register-form__password" placeholder="*********">
-				</div>
+				<input type="submit" value="Отправить письмо" class="Button Button--Primary">
 
-				<div class="section-form__input register-form__input">
-					<label for="register-form__rePassword">Повторите пароль:</label>
-					<input type="password" name="UserRePassword" id="register-form__rePassword" placeholder="*********">
-				</div>
-
-				<input type="submit" value="Регистрация в клубе" class="Button Button--Primary">
-
-				<div class="section-form-links register-form-links">
-					<a href="./auth.html" class="section-form__link register-form__link">Авторизация</a>
+				<div class="section-form-links recovery-form-links">
+					<a href="./auth.html" class="section-form__link recovery-form__link">Авторизация</a>
+					<a href="./auth.html" class="section-form__link recovery-form__link">Регистрация</a>
 				</div>
 			</form>
 		</div>
 	</section>
-
 
 	<footer class="footer" id="footer">
 		<div class="container">

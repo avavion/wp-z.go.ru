@@ -23,7 +23,8 @@
 				<ul class="header-nav__list">
 					<li class="header-nav__item"><a href="./profile.html" class="header-nav__link">Профиль</a>
 					</li>
-					<li class="header-nav__item"><a href="./request.html" class="header-nav__link" id="openModalRequest">Заявка</a>
+					<li class="header-nav__item"><a href="./request.html" class="header-nav__link"
+							id="openModalRequest">Заявка</a>
 					</li>
 					<li class="header-nav__item"><a href="./team.html" class="header-nav__link">Команда</a></li>
 					<li class="header-nav__item"><a href="./support.html" class="header-nav__link">Поддержка</a></li>
@@ -55,27 +56,42 @@
 	</header>
 
 
-	<section class="auth" id="auth">
+	<section class="section auth" id="auth">
 		<div class="container">
 			<div class="section-header auth-header">
 				<h2 class="section-header__title auth-header__title">
 					Авторизация
 				</h2>
 			</div>
-			<form class="section-form auth-form">
+			<form class="section-form auth-form" name="AuthForm" method="POST">
 
 				<div class="section-form__input auth-form__input">
 					<label for="auth-form__email">Ваша эл. почта:</label>
-					<input type="email" name="user_email" id="auth-form__email" placeholder="example@club.ru">
+					<input type="email" name="UserEmail" id="auth-form__email" placeholder="example@club.ru">
 				</div>
 
 				<div class="section-form__input auth-form__input">
 					<label for="auth-form__password">Ваш пароль:</label>
-					<input type="password" name="user_password" id="auth-form__password"
+					<input type="password" name="UserPassword" id="auth-form__password"
 						placeholder="Что-то секретное...">
+					<a href="./recovery.html" class="section-form__link auth-form__link">Забыли пароль?</a>
+				</div>
+
+				<div class="section-form-checkboxes">
+					<div class="section-form__checkbox">
+						<input type="checkbox" name="UserIsChecked" id="auth-form__checkbox">
+						<label class="section-form__caption auth-form__checkbox" for="auth-form__checkbox">Согласен(на)
+							на обратку
+							данных</label>
+					</div>
+
 				</div>
 
 				<input type="submit" value="Войти в клуб" class="Button Button--Primary">
+
+				<div class="section-form-links auth-form-links">
+					<a href="./register.html" class="section-form__link auth-form__link">Регистрация</a>
+				</div>
 
 			</form>
 		</div>
