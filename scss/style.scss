@@ -502,16 +502,28 @@ a {
 
 // Форум
 
+.forum {
+  &-content {
+    width: 910px;
+  }
+}
+
 .grid-forum {
   &-title {
     color: #000000;
     padding: 25px 0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     border-bottom: 2px solid #eee;
   }
-  &-item{
-    &__blog{
-      padding: 20px 30px;
+  &-item {
+    align-items: stretch;
+    &__blog {
+      border-radius: 10px;
+      padding: 20px 10px;
+      background-color: ghostwhite;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -625,6 +637,11 @@ a {
 // MEDIA
 
 @media (max-width: 991px) {
+  .forum {
+    &-content {
+      width: auto;
+    }
+  }
   .header {
     &-nav {
       &__list {
@@ -638,9 +655,9 @@ a {
     cursor: pointer;
   }
 
-  .grid{
-    &-title{
-      &__title{
+  .grid {
+    &-title {
+      &__title {
         font-size: 1em;
       }
     }
