@@ -500,6 +500,24 @@ a {
 
 // /Команда
 
+// Форум
+
+.grid-forum {
+  &-title {
+    color: #000000;
+    padding: 25px 0;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #eee;
+  }
+  &-item{
+    &__blog{
+      padding: 20px 30px;
+    }
+  }
+}
+
+// /Форум
+
 // Профиль
 
 .profile {
@@ -620,6 +638,13 @@ a {
     cursor: pointer;
   }
 
+  .grid{
+    &-title{
+      &__title{
+        font-size: 1em;
+      }
+    }
+  }
   .grid-team {
     &-content {
       &__members {
