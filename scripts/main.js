@@ -73,7 +73,7 @@ const accordion = (
 };
 
 // TODO: Проверка на check, если он стоит то разблокировать кнопку. Иначе, кнопка остаётся заблокированной. (Изначально чек не стоит)
-const checkbox = (checkboxSelector, buttonSelector) => {
+const checkboxChecked = (checkboxSelector, buttonSelector) => {
   const allCheckbox = document.querySelectorAll(checkboxSelector),
     buttons = document.querySelectorAll(buttonSelector);
 
@@ -82,6 +82,31 @@ const checkbox = (checkboxSelector, buttonSelector) => {
       alert("Чек стоит.");
     })
   );
+};
+
+// TODO: Доработать слайдер.
+const slider = (buttonNextSelector, buttonPrevSelector) => {
+
+  const nextButtons = document.querySelectorAll(buttonNextSelector), prevButtons = document.querySelectorAll(buttonPrevSelector);
+
+  nextButtons.forEach((item) => {
+    item.addEventListener("click", () => {
+
+    });
+  })
+
+  prevButtons.forEach((item) => {
+    item.addEventListener("click", () => {
+
+    });
+  })
+
+}
+
+// TODO: Сделать динамическую валидацию данных форм. (Регистрация, авторизация)
+
+const ValidateData = (...arg) => {
+
 };
 
 window.addEventListener("DOMContentLoaded", () => {
