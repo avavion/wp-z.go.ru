@@ -1,260 +1,326 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="black" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5c55b6f969.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Главная - Клуб "Паутина"</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="black">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/5c55b6f969.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/style.css">
-	<title>Главная - Клуб "Паутина"</title>
-</head>
+  <body>
+    <header id="header" class="header">
+      <div class="container">
+        <nav class="header-nav" id="header-nav">
+          <a href="index.html" class="header-nav__logo">
+            <img src="./assets/img/main_logo.svg" alt="Логотип клуба" />
+          </a>
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a href="./pages/profile.html" class="header-nav__link">
+                Профиль
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="./pages/request.html"
+                class="header-nav__link"
+                id="openModalRequest"
+              >
+                Заявка
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./pages/team.html" class="header-nav__link">Команда</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./pages/support.html" class="header-nav__link">
+                Поддержка
+              </a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./pages/auth.html" class="header-nav__link">
+                Авторизация
+              </a>
+            </li>
+          </ul>
 
-<body>
+          <a class="header-nav__button openMenu" id="openMenu">
+            <i class="fas fa-bars"></i>
+          </a>
 
-	<header id="header" class="header">
-		<div class="container">
-			<nav class="header-nav" id="header-nav">
-				<a href="index.html" class="header-nav__logo">
-					<img src="./assets/img/main_logo.svg" alt="Логотип клуба">
-				</a>
-				<ul class="header-nav__list">
-					<li class="header-nav__item"><a href="./pages/profile.html" class="header-nav__link">Профиль</a>
-					</li>
-					<li class="header-nav__item"><a href="./pages/request.html" class="header-nav__link"
-							id="openModalRequest">Заявка</a>
-					</li>
-					<li class="header-nav__item"><a href="./pages/team.html" class="header-nav__link">Команда</a></li>
-					<li class="header-nav__item"><a href="./pages/support.html" class="header-nav__link">Поддержка</a>
-					</li>
-					<li class="header-nav__item"><a href="./pages/auth.html" class="header-nav__link">Авторизация</a>
-					</li>
-				</ul>
+          <div id="MobileMenu" class="mobile-menu">
+            <div class="mobile-menu__close" id="closeMenu">
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./pages/profile.html" class="mobile-menu__link">
+                  Профиль
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./pages/request.html" class="mobile-menu__link">
+                  Заявка
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./pages/team.html" class="mobile-menu__link">
+                  Команда
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./pages/support.html" class="mobile-menu__link">
+                  Поддержка
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./pages/auth.html" class="mobile-menu__link">
+                  Авторизация
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
-				<a class="header-nav__button openMenu" id="openMenu">
-					<i class="fas fa-bars"></i>
-				</a>
+      <div class="header__image">
+        <div class="header__overlay">
+          <div class="container">
+            <div class="header-content">
+              <h1 class="header-content__title">Добро пожаловать в клуб</h1>
+              <a
+                href="#"
+                class="Button Button--Secondary"
+                id="openModalRequest"
+              >
+                Оставить заявку
+              </a>
+              <!-- <a class="arrow--down arrow__btn" href="#about"><i class="far fa-arrow-alt-circle-down"></i></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-				<div id="MobileMenu" class="mobile-menu">
-					<div class="mobile-menu__close" id="closeMenu">
-						<i class="fas fa-times"></i>
-					</div>
-					<ul class="mobile-menu__list">
-						<li class="mobile-menu__item"><a href="./pages/profile.html"
-								class="mobile-menu__link">Профиль</a></li>
-						<li class="mobile-menu__item"><a href="./pages/request.html"
-								class="mobile-menu__link">Заявка</a></li>
-						<li class="mobile-menu__item"><a href="./pages/team.html" class="mobile-menu__link">Команда</a>
-						</li>
-						<li class="mobile-menu__item"><a href="./pages/support.html"
-								class="mobile-menu__link">Поддержка</a></li>
-						<li class="mobile-menu__item"><a href="./pages/auth.html"
-								class="mobile-menu__link">Авторизация</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-header section-header">
+          <h2 class="about-header__title section-header__title">
+            О нас
+          </h2>
+          <p class="about-header__text section-header__text">
+            Занимаемся разработкой веб-сайтов, дизайном и проектированием
+          </p>
+        </div>
+        <div class="about-main">
+          <div class="accordion about-accordion">
+            <div class="accordion-item about-accordion-item">
+              <div class="accordion-title about-accordion-title">
+                <h3 class="accordion__title about-accordion__title">
+                  Для чего этот клуб?
+                </h3>
+                <div class="accordion__button about-accordion__button">
+                  <i class="fas fa-chevron-left"></i>
+                </div>
+              </div>
 
-		<div class="header__image">
-			<div class="header__overlay">
-				<div class="container">
-					<div class="header-content">
-						<h1 class="header-content__title">Добро пожаловать в клуб</h1>
-						<a href="#" class="Button Button--Secondary" id="openModalRequest">
-							Оставить заявку
-						</a>
-						<!-- <a class="arrow--down arrow__btn" href="#about"><i class="far fa-arrow-alt-circle-down"></i></a> -->
-					</div>
-				</div>
-			</div>
-		</div>
+              <div class="accordion-content about-accordion-content">
+                <p
+                  class="accordion-content__text about-accordion-content__text"
+                >
+                  Этот клуб для получения новых знаний в веб-разработке! Если у
+                  вас есть желание развивать себя, то мы рады видеть вас в нашем
+                  клубе!
+                </p>
+              </div>
+            </div>
 
-	</header>
+            <div class="accordion-item about-accordion-item">
+              <div class="accordion-title">
+                <h3 class="accordion__title about-accordion__title">
+                  Сайт находится в стадии разработки?
+                </h3>
+                <div class="accordion__button about-accordion__button">
+                  <i class="fas fa-chevron-left"></i>
+                </div>
+              </div>
 
-	<section class="about" id="about">
-		<div class="container">
-			<div class="about-header section-header">
-				<h2 class="about-header__title section-header__title">
-					О нас
-				</h2>
-				<p class="about-header__text section-header__text">
-					Занимаемся разработкой веб-сайтов, дизайном и проектированием
-				</p>
-			</div>
-			<div class="about-main">
-				<div class="accordion about-accordion">
+              <div class="accordion-content about-accordion-content">
+                <p
+                  class="accordion-content__text about-accordion-content__text"
+                >
+                  Да, на данный момент сайт действительно находится в лапах
+                  коварного Front-End разработчика, который издевается на
+                  сайтом. :3 Возможны сбои в работе!
+                </p>
+              </div>
+            </div>
 
-					<div class="accordion-item about-accordion-item">
+            <div class="accordion-item about-accordion-item">
+              <div class="accordion-title">
+                <h3 class="accordion__title about-accordion__title">
+                  Есть ли у клуба группа ВКонтакте?
+                </h3>
+                <div class="accordion__button about-accordion__button">
+                  <i class="fas fa-chevron-left"></i>
+                </div>
+              </div>
 
-						<div class="accordion-title about-accordion-title">
+              <div class="accordion-content about-accordion-content">
+                <p
+                  class="accordion-content__text about-accordion-content__text"
+                >
+                  Да, у сайта есть закрытая группа ВКонтакте. Ссылку на группу
+                  можно найти в разделе "Социальные сети".
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-							<h3 class="accordion__title about-accordion__title">
-								Для чего этот клуб?
-							</h3>
-							<div class="accordion__button about-accordion__button">
-								<i class="fas fa-chevron-left"></i>
-							</div>
+    <section class="news" id="news">
+      <div class="container">
+        <div class="news-header section-header">
+          <h2 class="section-header__title news-header__title">
+            Новости клуба
+          </h2>
+        </div>
 
-						</div>
+        <div class="news-content">
+          <div class="news-cards">
+            <a href="#" class="news-item">
+              <img
+                src="./assets/img/header__background.jpg"
+                alt="Баннер"
+                class="news-item__banner"
+              />
+              <h4 class="news-item__title">
+                Открытие сайта клуба "Паутина"
+              </h4>
+            </a>
 
-						<div class="accordion-content about-accordion-content">
-							<p class="accordion-content__text about-accordion-content__text">
-								Этот клуб для получения новых знаний в веб-разработке! Если у вас есть желание развивать
-								себя, то мы рады видеть вас в нашем клубе!
-							</p>
-						</div>
+            <a href="#" class="news-item">
+              <img
+                src="./assets/img/header__background.jpg"
+                alt="Баннер"
+                class="news-item__banner"
+              />
+              <h4 class="news-item__title">
+                Первый конкурс
+              </h4>
+            </a>
 
-					</div>
+            <a href="#" class="news-item">
+              <img
+                src="./assets/img/header__background.jpg"
+                alt="Баннер"
+                class="news-item__banner"
+              />
+              <h4 class="news-item__title">
+                Лучший Front-End разработчик клуба
+              </h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<div class="accordion-item about-accordion-item">
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-logo">
+            <img
+              src="./assets/img/main_logo.svg"
+              alt="Логотип клуба"
+              class="footer-loto__img"
+            />
+          </div>
+          <div class="footer-contacts">
+            <h3 class="footer__title">
+              Контакты
+            </h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="tel:89009999999" class="footer__list-link">
+                  +7 (900) 999-99-99
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-support">
+            <h3 class="footer__title">Поддержка</h3>
+            <p class="footer__text">
+              Поддержим вас в трудную минуту секунду день недели
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-						<div class="accordion-title">
+    <div class="modalRequest modal-overlay" id="ModalRequest">
+      <div class="modal modal-request">
+        <div class="modal-request-header modal-header">
+          <h3 class="modal-header__title">
+            Оставить заявку
+          </h3>
+          <div class="modal-close" id="closeModalRequest">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="modal-request-main modal-main">
+          <form class="section-form modal-form">
+            <div class="section-form__input modal-form__input">
+              <label for="modal-form__name">Ваше имя:</label>
+              <input
+                type="text"
+                name="user_name"
+                id="modal-form__name"
+                placeholder="Алан"
+              />
+            </div>
 
-							<h3 class="accordion__title about-accordion__title">
-								Сайт находится в стадии разработки?
-							</h3>
-							<div class="accordion__button about-accordion__button">
-								<i class="fas fa-chevron-left"></i>
-							</div>
+            <div class="section-form__input modal-form__input">
+              <label for="modal-form__email">Ваша эл. почта:</label>
+              <input
+                type="email"
+                name="user_email"
+                id="modal-form__email"
+                placeholder="example@club.ru"
+              />
+            </div>
 
-						</div>
+            <div class="section-form__input modal-form__input">
+              <label for="modal-form__phone">Ваш номер телефона:</label>
+              <input
+                type="tel"
+                name="user_phone"
+                id="modal-form__phone"
+                placeholder="+7 (900) 999 99 99"
+              />
+            </div>
 
-						<div class="accordion-content about-accordion-content">
-							<p class="accordion-content__text about-accordion-content__text">
-								Да, на данный момент сайт действительно находится в лапах коварного Front-End
-								разработчика, который издевается на сайтом. :3 Возможны сбои в работе!
-							</p>
-						</div>
+            <input
+              type="submit"
+              value="Оставить заявку"
+              class="Button Button--Primary"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
 
-					</div>
-
-					<div class="accordion-item about-accordion-item">
-
-						<div class="accordion-title">
-
-							<h3 class="accordion__title about-accordion__title">
-								Есть ли у клуба группа ВКонтакте?
-							</h3>
-							<div class="accordion__button about-accordion__button">
-								<i class="fas fa-chevron-left"></i>
-							</div>
-
-						</div>
-
-						<div class="accordion-content about-accordion-content">
-							<p class="accordion-content__text about-accordion-content__text">
-								Да, у сайта есть закрытая группа ВКонтакте. Ссылку на группу можно найти в разделе
-								"Социальные сети".
-							</p>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="news" id="news">
-		<div class="container">
-			<div class="news-header section-header">
-				<h2 class="section-header__title news-header__title">
-					Новости клуба
-				</h2>
-			</div>
-
-			<div class="news-content">
-				<div class="news-cards">
-
-					<a href="#" class="news-item">
-						<img src="./assets/img/header__background.jpg" alt="Баннер" class="news-item__banner">
-						<h4 class="news-item__title">
-							Открытие сайта клуба "Паутина"
-						</h4>
-					</a>
-
-					<a href="#" class="news-item">
-						<img src="./assets/img/header__background.jpg" alt="Баннер" class="news-item__banner">
-						<h4 class="news-item__title">
-							Первый конкурс
-						</h4>
-					</a>
-
-					<a href="#" class="news-item">
-						<img src="./assets/img/header__background.jpg" alt="Баннер" class="news-item__banner">
-						<h4 class="news-item__title">
-							Лучший Front-End разработчик клуба
-						</h4>
-					</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<footer class="footer" id="footer">
-		<div class="container">
-			<div class="footer-wrap">
-				<div class="footer-logo">
-					<img src="./assets/img/main_logo.svg" alt="Логотип клуба" class="footer-loto__img">
-				</div>
-				<div class="footer-contacts">
-					<h3 class="footer__title">
-						Контакты
-					</h3>
-					<ul class="footer__list">
-						<li class="footer__list-item"><a href="tel:89009999999" class="footer__list-link">+7 (900)
-								999-99-99</a></li>
-					</ul>
-				</div>
-				<div class="footer-support">
-					<h3 class="footer__title">Поддержка</h3>
-					<p class="footer__text">Поддержим вас в трудную минуту секунду день недели </p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-	<div class="modalRequest modal-overlay" id="ModalRequest">
-		<div class="modal modal-request">
-			<div class="modal-request-header modal-header">
-				<h3 class="modal-header__title">
-					Оставить заявку
-				</h3>
-				<div class="modal-close" id="closeModalRequest">
-					<i class="fas fa-times"></i>
-				</div>
-			</div>
-			<div class="modal-request-main modal-main">
-				<form class="section-form modal-form">
-
-					<div class="section-form__input modal-form__input">
-						<label for="modal-form__name">Ваше имя:</label>
-						<input type="text" name="user_name" id="modal-form__name" placeholder="Алан">
-					</div>
-
-					<div class="section-form__input modal-form__input">
-						<label for="modal-form__email">Ваша эл. почта:</label>
-						<input type="email" name="user_email" id="modal-form__email" placeholder="example@club.ru">
-					</div>
-
-					<div class="section-form__input modal-form__input">
-						<label for="modal-form__phone">Ваш номер телефона:</label>
-						<input type="tel" name="user_phone" id="modal-form__phone" placeholder="+7 (900) 999 99 99">
-					</div>
-
-					<input type="submit" value="Оставить заявку" class="Button Button--Primary">
-
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<script src="scripts/main.js"></script>
-</body>
-
+    <script src="scripts/main.js" async></script>
+  </body>
 </html>

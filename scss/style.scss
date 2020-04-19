@@ -12,7 +12,7 @@ $BackgroundColor: #000000;
 $TextColor: #ffffff;
 $Primary__Button: #000000;
 $Secondary__Button: #45578e;
-$LinkColor: #000000;
+$LinkColor: #0c0808;
 $aboutBackgroundColor: #ffffff;
 
 :root {
@@ -204,6 +204,23 @@ a {
 }
 
 // /Global Settings
+
+// Preloader
+
+.preloader {
+  &__bar {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000 url("../assets/img/bars.svg") center center no-repeat;
+    background-size: 41px;
+  }
+}
+// /Preloader
 
 // Modals
 

@@ -1,11 +1,14 @@
+// Выключить скролл на странице
 const scrollOff = () => {
   document.body.style.overflow = "hidden";
 };
 
+// Включить скролл на странице
 const scrollOn = () => {
   document.body.style.overflow = "";
 };
 
+// TODO: Готовое бургер-меню.
 const burgerMenu = (triggerSelector, menuSelector, closeSelector) => {
   const triggerButtons = document.querySelectorAll(triggerSelector),
     mobileMenu = document.querySelector(menuSelector),
@@ -24,6 +27,7 @@ const burgerMenu = (triggerSelector, menuSelector, closeSelector) => {
   });
 };
 
+// TODO: Готовое модальное окно
 const modalWindow = (
   triggerSelector,
   modalWindowSelector,
@@ -55,6 +59,7 @@ const modalWindow = (
   });
 };
 
+// TODO: Готовый аккордион
 const accordion = (
   triggerSelector,
   showContentSelector,
@@ -86,31 +91,57 @@ const checkboxChecked = (checkboxSelector, buttonSelector) => {
 
 // TODO: Доработать слайдер.
 const slider = (buttonNextSelector, buttonPrevSelector) => {
-
-  const nextButtons = document.querySelectorAll(buttonNextSelector), prevButtons = document.querySelectorAll(buttonPrevSelector);
+  const nextButtons = document.querySelectorAll(buttonNextSelector),
+    prevButtons = document.querySelectorAll(buttonPrevSelector);
 
   nextButtons.forEach((item) => {
-    item.addEventListener("click", () => {
-
-    });
-  })
+    item.addEventListener("click", () => {});
+  });
 
   prevButtons.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", () => {});
+  });
+};
 
-    });
-  })
+const fadeOut = (animationSelector, interval) => {
+  const animationElement = document.querySelectorAll(animationSelector);
 
-}
+  animationElement.forEach((item) => {
+    item.style.opacity = 1;
+    let animationInterval = setInterval(() => {
+      item.style.opacity = item.style.opacity - 0.05;
+      if (item.style.opacity < 0.05) {
+        clearInterval(animationInterval);
+        item.style.display = "none";
+      }
+    }, interval);
+  });
+};
+
+// TODO: Индикатор загрузки страницы
+const preloader = (loading) => {
+  let loader = document.createElement("div");
+  loader.className = `preloader`;
+  loader.innerHTML = `<div class="preloader__bar"></div>`;
+  document.body.prepend(loader);
+
+  if (loading) {
+    scrollOff();
+  } else {
+    fadeOut(".preloader", 16);
+    scrollOn();
+  }
+};
 
 // TODO: Сделать динамическую валидацию данных форм. (Регистрация, авторизация)
 
-const ValidateData = (...arg) => {
+preloader(true);
 
-};
-
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   burgerMenu("#openMenu", "#MobileMenu", "#closeMenu");
   modalWindow("#openModalRequest", "#ModalRequest", "#closeModalRequest");
   accordion(".accordion-title", ".accordion-content", ".accordion__button");
+  setTimeout(() => {
+    preloader(false);
+  }, 500);
 });
